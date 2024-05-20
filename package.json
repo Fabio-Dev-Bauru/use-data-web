@@ -1,0 +1,29 @@
+{
+  "name": "use-data-web",
+  "description": "A functional hook that handle request data from api.",
+  "version": "0.0.1",
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "repository": {
+    "url": "https://github.com/Fabio-Dev-Bauru/use-data-web"
+  },
+  "scripts": {
+    "build": "tsup"
+  },
+  "keywords": [
+    "hook",
+    "fetch",
+    "axios data"
+  ],
+  "author": "Fabio Henrique",
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@types/react": "^18.3.2",
+    "use-data-web": "^0.0.1"
+  }
+}
