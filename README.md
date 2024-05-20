@@ -17,23 +17,26 @@ import { useData } from "use-data-web";
 
 // call the hook function
 const {
-    isLoading,
-    data: branchs,
-    error,
-    forceUpdateData,
+    isLoading, // boolean that indicates if is loading the request api.
+    data: branchs, // response from api typed by the type passed to the function
+    error, // returns string if there was some error during request api
+    forceUpdateData, // function that forces call data again
   } = useData<Type>({
     fn: () => getBranchs(), // put the function that returns data from api
     deps: [] // you can put dependencies to callback the function like use effect
     shouldRun: true // a boolean variable to determine if the fn should be run
   });
 
+if (error) {
+    console.log(error);
+}
+
 If you need revalidate the data you can call forceUpdateData function, for example:
 
   const handleSomething = () => {
     // to do something
-    // forceUpdateData(); // here the hook will be called again and the data had been updated.
+    // forceUpdateData(); // here the hook will be called again and the data would be updated.
   }
-
 
 ```
 
