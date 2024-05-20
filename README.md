@@ -13,7 +13,7 @@ npm install use-data-web
 ## Usage
 
 ```typescript
-import { useFetch } from "use-data-web";
+import { useData } from "use-data-web";
 
 // call the hook function
 const {
